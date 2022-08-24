@@ -10,7 +10,7 @@ export default createStore({
   },
   actions: {
     getProducts : async (context) => {
-      fetch("https://agsheinapi.herokuapp.com/products")
+      await fetch("https://fly-kickz.herokuapp.com/")
       .then((res) => res.json())
       .then((data) => {
         context.state.products = data.products
@@ -18,7 +18,7 @@ export default createStore({
       })
     },
     getProduct : async (context, id) => {
-      fetch(`https://agsheinapi.herokuapp.com/products/${id}`)
+      fetch(`https://fly-kickz.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         let {results} = data;

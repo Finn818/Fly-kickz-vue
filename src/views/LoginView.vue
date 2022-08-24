@@ -12,9 +12,9 @@
               <h3>LOGIN</h3>
           </div>
           <div>
-              <label for="" class="fw-light">EMAIL</label>
+              <label for="" class="fw-light">USER-NMAE</label>
               <br>
-              <input v-model="userEmail" type="text" required>
+              <input v-model="userName" type="text" required>
           </div>
 
           <br>
@@ -22,7 +22,7 @@
           <div>
               <label for="" class="fw-light">PASSWORD</label>
               <br>
-              <input v-model="userpassword" type="text" required>
+              <input v-model="userPassword" type="text" required>
           </div>
 
           <div>
@@ -32,7 +32,7 @@
     </div>
    
 
-      <div id="Register">
+      <!-- <div id="Register">
         <form id="RegisterForm">
             <div id="RegisterFormTitle">
                 <h3>REGISTER</h3>
@@ -63,7 +63,7 @@
               <button type="submit" style="width: 100%">CREATE</button>
           </div>
         </form>
-    </div>
+    </div> -->
 
 </div>
 
@@ -85,7 +85,7 @@ export default{
             return this.$store.dispatch('login',
             {
               email: this.email,
-              userpassword: this.userpassword
+              userPassword: this.userPassword
             })
         }
     }
@@ -102,14 +102,14 @@ export default{
    width: 30%;
 }
 
-#Register{
+/* #Register{
     width: 30%;
     
-}
+} */
 
-#RegisterForm{
-    /* background-color: darkgray;  */
-}
+/* #RegisterForm{
+    background-color: darkgray; 
+} */
 
 #LoginFormTitle, #RegisterFormTitle{
     margin-bottom: 3rem;
