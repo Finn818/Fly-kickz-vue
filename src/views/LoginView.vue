@@ -12,21 +12,26 @@
               <h3>LOGIN</h3>
           </div>
           <div>
-              <label for="" class="fw-light">USER-NMAE</label>
+              <label for="" class="fw-light">USER-NAME</label>
               <br>
               <input v-model="userName" type="text" required>
           </div>
+            <!-- <br> -->
 
-          <br>
+            <div>
+              <label for="" class="fw-light">User-EMAIL</label>
+              <br>
+              <input v-model="userEmail" type="text" required>
+          </div>
 
           <div>
               <label for="" class="fw-light">PASSWORD</label>
               <br>
-              <input v-model="userPassword" type="text" required>
+              <input v-model="userPassword" type="password" required>
           </div>
 
           <div>
-              <button type="submit" style="width: 100%">LOGIN</button>
+              <button onclick="myFunction(submit)" style="width: 100%">LOGIN</button>
           </div>
        </form>
     </div>
@@ -76,15 +81,17 @@
 export default{
     data(){
         return{
+            userName: null,
             userEmail: null,
-            userpassword: null,
+            userPassword: null,
         }
     },
     methods:{
         login(){
             return this.$store.dispatch('login',
             {
-              email: this.email,
+              userName: this.userName,
+              userEmail: this.userEmail,
               userPassword: this.userPassword
             })
         }
@@ -94,9 +101,9 @@ export default{
 <style scoped>
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100&display=swap'); */
 
-#LoginForm{
-    /* background-color: gray; */
-}
+/* #LoginForm{
+    background-color: gray;
+} */
 
 #Login{
    width: 30%;

@@ -5,11 +5,11 @@
        <div class="col-sm-6">
            <div class="container" style="margin-top: 5rem">
 
-        <div id="Img_URL" style="">
+        <div id="Img_URL" style="margin-top: 2rem" class="img-fluid">
                <h1>{{products.Img_URL}}</h1>
            </div>
 
-           <div id="prodName" style="">
+           <div id="prodName" style="margin-top: 2rem">
                <h1>{{products.prodName}}</h1>
            </div>
                
@@ -34,9 +34,7 @@
                </div>
 
             <div style="display: flex; justify-content: center">
-                <button>
-                
-            </button>
+                <button>check-out</button>
             </div>
             
            </div>
@@ -49,9 +47,36 @@
 </template>
 
 <script>
-
+export default {
+ 
+    mounted(){
+        this.$store.dispatch('products', this.$route.params.id)
+    },
+    computed:{
+        product(){
+            return this.$store.state.product
+        }
+    }
+}
 </script>
 
 <style>
+
+button {
+    background: #000;
+    width: 40%;
+    color: white;
+    margin-top: 2rem;
+    border: none;
+}
+
+#prodPrice{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+}
+
+#prodName{
+     font-family: 'Montserrat', sans-serif;
+}
 
 </style>

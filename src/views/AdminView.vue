@@ -22,8 +22,8 @@
 
       <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;" scope="row">{{product.id}}</th>
       <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;" scope="row">{{product.Img_URL}}</th>
-      <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodName}}</strong></td>
       <td><img :src="product.prodImg_URL" style="width: 5rem"></td>
+      <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodName}}</strong></td>
       <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodSize}}</strong></td>
       <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodPrice}}</td>
       <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodSize}}</td>
@@ -53,11 +53,11 @@
 <script>
 export default {
     mounted() {
-    this.$store.dispatch("getprod");
+    this.$store.dispatch("products");
   },
   computed: {
     products() {
-      return this.$store.state.allprod;
+      return this.$store.state.AllProducts;
     },
   },
 }
