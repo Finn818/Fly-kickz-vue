@@ -9,6 +9,7 @@
   </nav>
   <router-view/> -->
   <NavBar/>
+  <FooterComponent/>
   <div class="min-vh-100">
     <router-view/>
   </div>
@@ -21,7 +22,8 @@ import NavBar from './components/NavBar.vue'
 // import FooterComponent from './components/FooterComponent.vue'
 
 export default {
-  components: {NavBar}
+  components: {NavBar, }
+  // FooterComponent
 }
 </script>
 

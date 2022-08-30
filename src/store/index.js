@@ -2,20 +2,20 @@ import { createStore } from 'vuex'
 const nodeEOMP = "https://fly-kickz.herokuapp.com/";
 export default createStore({
   state: {
-    allproduct: null,
-    singleproduct: null
+    products: null,
+    product: null
   },
   getters: {
-    
+    getUsers: state => state.users,
+    getProducts: state => state.products
   },
   mutations: {
-    allproduct(state, products) {
-      state.allproduct = products
+    setProducts(state, products) {
+      state.products = products
 
     },
-    singleproduct(state, products) {
-      state.singleproduct = products
-      
+    setProduct(state, product) {
+      state.product = product
     }
   },
   actions: {
@@ -40,14 +40,15 @@ export default createStore({
       }
     },
     async AllProducts(context) {
-      const response = await fetch("https://fly-kickz.herokuapp.com/products");
+      const response = await fetch(`${nodeEOMP}products`);
       const data = await response.json();
-      context.commit('products', data.results)
+      console.log(data);
+      context.commit('setProducts', data.products)
     },
-    SingleProducts(context, id){
+    SingleProduct(context, id){
       fetch(`https://fly-kickz.herokuapp.com/products/${id}`)
       .then(res => res.json())
-      .then(data => context.commit('singleproducts', data.results[0]))
+      .then(data => context.commit('setProduct', data.products[0]))
     }
   },
   modules: {

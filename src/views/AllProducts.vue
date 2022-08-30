@@ -2,32 +2,31 @@
   <div class="container" style="margin-top: 5rem">
 
 
-      <div class="row" >
-          <div style="height: 100vh" class="col-md-3" v-for="allproduct in products" :key="allproduct">
+    <div class="row d-flex" >
+        <div class="card-body">
+          <div style="height: 100vh" class="col-md-3" v-for="product in products" :key="product.id">
 
-      <div style="display: flex; justify-content: center" >
-
-        <router-link id="prodLink" :to="{name : 'products' , params:{ id : products.id}}">
+        <div id="prodLink" :to="{name : 'allproducts' , params:{ id : product.id}}">
           <div class="card" style="width: 20rem; margin-bottom: 3rem; border: none;" >
-          <img id="Img_URL" :src="products.Img_URL" class="img-fluid  card-img-top" alt="..." />
-          <div class="card-body">
+      
             
-            <p class="card-text" id="Img_URL">
-                {{products.Img_URL}}
-            </p>
+            <img
+            id="Img_URL"
+            :src="product.Img_URL"
+            class="img-fluid" card-img-top
+            alt="...">
 
             <p class="card-text" id="prodName">
                 {{products.prodName}}
             </p>
 
-            <button>INFO</button>
-          </div>
+            <button class="nav-item"><router-link to="/SingleProduct" class="nav-link px-2 text-muted">INFO
+            </router-link></button>
         </div>
-        </router-link>
-
+      </div>
       </div>
     </div>
-      </div>
+    </div>
     
   </div>
 </template>

@@ -4,21 +4,23 @@
 
        <div class="col-sm-6">
            <div class="container" style="margin-top: 5rem">
+            <div v-if="index < 1">
 
-        <div id="Img_URL" style="margin-top: 2rem" class="img-fluid">
-               <h1>{{products.Img_URL}}</h1>
-           </div>
+            <div>
+        <img id="Img_URL" :src="product.Img_URL" style="margin-top: 2rem" class="img-fluid"/>
+
+        </div>
 
            <div id="prodName" style="margin-top: 2rem">
                <h1>{{products.prodName}}</h1>
            </div>
                
                 <div id="prodPrice" style="margin-top: 2rem">
-                    <p id='prodPrice'>R {{products.prodPrice}}</p>
+                    <p id='prodPrice'>R: {{products.prodPrice}}</p>
                 </div>
 
                 <div id="prodSize" style="margin-top: 2rem">
-                    <p id='prodize'> {{products.prodSize}}</p>
+                    <p id='prodize'> {{productDetails.prodSize}}</p>
                 </div>
 
                 <div id="prodArrival_date" style="margin-top: 2rem">
@@ -27,6 +29,10 @@
 
                 <div id="Stock_Available" style="margin-top: 2rem">
                     <p id='Stock_Available'>{{products.Stock_Available}}</p>
+                </div>
+
+                <div id="color" style="margin-top: 2rem">
+                    <p id='color'>{{productDetails.prodcolor}}</p>
                 </div>
 
                 <div id="prodDesc" style="margin-top: 2rem">
@@ -38,9 +44,8 @@
             </div>
             
            </div>
-            
-            
-            
+      
+        </div>  
        </div> 
     </div> 
     </div>
@@ -50,7 +55,7 @@
 export default {
  
     mounted(){
-        this.$store.dispatch('products', this.$route.params.id)
+        this.$store.dispatch('singleproduct', this.$route.params.id)
     },
     computed:{
         product(){
