@@ -26,10 +26,9 @@
               </p>
 
 
-              <button class="nav-item">
+              <button class="nav-item" id="btn">
                 <router-link
-                  to="/singleproduct"
-                  class="nav-link px-2 text-muted"
+                :to="{ name: 'singleproduct', params: { id: product.id } }"
                   >INFO
                 </router-link>
               </button>

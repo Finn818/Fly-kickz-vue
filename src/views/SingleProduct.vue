@@ -24,23 +24,23 @@
            </div>
                
                 <div id="prodPrice" style="margin-top: 2rem">
-                    <p id='prodPrice'>R: {{products.prodPrice}}</p>
+                    <p>R: {{products.prodPrice}}</p>
                 </div>
 
                 <div id="prodSize" style="margin-top: 2rem">
-                    <p id='prodize'> {{productDetails.prodSize}}</p>
+                    <p> {{productDetails.prodSize}}</p>
                 </div>
 
                 <div id="prodArrival_date" style="margin-top: 2rem">
-                    <p id='prodArrival_date'>{{products.prodArrival_date}}</p>
+                    <p>{{products.prodArrival_date}}</p>
                 </div>
 
                 <div id="Stock_Available" style="margin-top: 2rem">
-                    <p id='Stock_Available'>{{products.Stock_Available}}</p>
+                    <p>{{products.Stock_Available}}</p>
                 </div>
 
                 <div id="color" style="margin-top: 2rem">
-                    <p id='color'>{{productDetails.prodcolor}}</p>
+                    <p>{{productDetails.prodcolor}}</p>
                 </div>
 
                 <div id="prodDesc" style="margin-top: 2rem">
@@ -48,7 +48,11 @@
                </div>
 
             <div style="display: flex; justify-content: center">
-                <button>check-out</button>
+                <button> <router-link
+                  to="/allproducts"
+                  class="nav-link px-2 text-muted"
+                  >Check-Out
+                </router-link></button>
             </div>
             
            </div>
@@ -69,14 +73,14 @@ export default {
         }
     },
     mounted(){
-        this.$store.dispatch('AllProduct', this.$route.params.id)
+        this.$store.dispatch('SingleProduct', this.$route.params.id)
     }
 }
 </script>
 
 <style>
 
-button {
+/* button {
     background: #000;
     width: 40%;
     color: white;
@@ -91,6 +95,13 @@ button {
 
 #prodName{
      font-family: 'Montserrat', sans-serif;
-}
+} */
+
+#text{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 13rem;
+  }
 
 </style>
