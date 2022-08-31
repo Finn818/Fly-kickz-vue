@@ -1,5 +1,4 @@
 <template>
-  <!-- :to="{ name: 'allproducts', params: { id: product.id } }" -->
   <div v-if="products">
     <div class="container" style="margin-top: 5rem">
     <div class="row d-flex">
@@ -9,7 +8,7 @@
         >
           <div class="card-body">
             <div
-              style="height: 1000vh"
+              style="height: 55vh"
               
               v-for="product in products"
               :key="product.id"
@@ -26,7 +25,6 @@
                 {{ product.prodName }}
               </p>
 
-              <CardComponent/>
 
               <button class="nav-item">
                 <router-link
@@ -55,7 +53,7 @@ export default {
     },
     mounted() {
         this.$store.dispatch("AllProducts");
-    },
+    }
     // components: { CardComponent }
 };
 </script>

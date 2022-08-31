@@ -15,8 +15,8 @@ export default createStore({
       state.allproducts = products
 
     },
-    setProduct(state, products) {
-      state.singleproduct = products
+    setProduct(state, product) {
+      state.singleproduct = product
     }
   },
   actions: {
@@ -52,7 +52,7 @@ export default createStore({
       fetch(`https://fly-kickz.herokuapp.com/products/${id}`)
       .then((res) => res)
       .then( data => data.json())
-      .then(results => context.commit('setProduct', results.products[0]))
+      .then(results => context.commit('setProduct', results.product[0]))
     },
   },
   modules: {

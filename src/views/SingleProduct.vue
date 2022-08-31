@@ -1,5 +1,6 @@
 <template>
-    <div class="container" style="margin-bottom: 5rem" v-if="products" >
+    <div  v-if="product">
+    <div class="container" style="margin-bottom: 5rem">
        <div class="row">
 
        <div class="card"
@@ -7,7 +8,8 @@
            <div class="container" style="margin-top: 5rem">
             <div v-if="index < 1">
 
-            <div>
+            <div v-for="product in products"
+              :key="product.id">
         <!-- <img id="Img_URL" :src="product.Img_URL" style="margin-top: 2rem" class="img-fluid"/> -->
         <img
             id="Img_URL"
@@ -55,6 +57,8 @@
        </div> 
     </div> 
     </div>
+    </div>
+    <div id="text" v-else>No shoes in stock</div>
 </template>
 
 <script>
@@ -65,7 +69,7 @@ export default {
         }
     },
     mounted(){
-        this.$store.dispatch('singleproduct', this.$route.params.id)
+        this.$store.dispatch('AllProduct', this.$route.params.id)
     }
 }
 </script>
