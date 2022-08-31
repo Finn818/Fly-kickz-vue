@@ -48,13 +48,13 @@
 
 <script>
 export default {
-  mounted() {
-    this.$store.dispatch("AllProducts");
-  },
   computed: {
     products() {
-      return this.$store.state.products;
+      return this.$store.state.allproducts;
     },
+  },
+  mounted() {
+    this.$store.dispatch("AllProducts");
   },
 };
 </script>

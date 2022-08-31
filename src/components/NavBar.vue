@@ -6,7 +6,7 @@
     <div id="right-navbar" style="display: flex; justify-content: start">
 
     <div >
-       <router-link to='/products' id="prodlink">Products</router-link>
+       <router-link to='/allproducts' id="prodlink">Products</router-link>
     </div>
      
     </div>

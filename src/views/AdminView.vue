@@ -20,23 +20,23 @@
   <tbody v-if="products">
     <tr v-for="product in products" :key="product" :product="product">
 
-      <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;" scope="row">{{product.id}}</th>
+      <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.7rem;" scope="row">{{product.id}}</th>
       <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;" scope="row">{{product.Img_URL}}</th>
       <td><img :src="product.prodImg_URL" style="width: 5rem"></td>
       <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodName}}</strong></td>
       <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodSize}}</strong></td>
       <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodPrice}}</td>
-      <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodSize}}</td>
+      <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodColor}}</td>
       <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodArrival_Date}}</td>
       <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.Stock_Available}}</strong></td>
         <td class="fw-light">{{product.prodDesc}}</td>
       <td>
-        <button type="submit" style="width: 100%">
+        <button type="submit" style="width: 20%">
             EDIT
           </button>
       </td>
       <td>
-          <button type="submit" style="width: 100%">
+          <button type="submit" style="width: 20%">
             DELETE
           </button>
       </td>
@@ -53,11 +53,11 @@
 <script>
 export default {
     mounted() {
-    this.$store.dispatch("products");
+    this.$store.dispatch("AllProducts");
   },
   computed: {
     products() {
-      return this.$store.state.AllProducts;
+      return this.$store.state.allproducts;
     },
   },
 }

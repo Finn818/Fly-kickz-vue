@@ -22,10 +22,10 @@ const routes = [
       }
     },
     {
-      path: '/singleproducts/:id',
+      path: '/singleproduct/:id',
       name: 'singleproduct',
       component: function () {
-        return import('../views/SingleProducts.vue')
+        return import('../views/SingleProduct.vue')
       },
       props: true
     },

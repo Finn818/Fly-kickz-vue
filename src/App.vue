@@ -12,18 +12,21 @@
   <FooterComponent/>
   <div class="min-vh-100">
     <router-view/>
+    <!-- <CardComponent/> -->
   </div>
 
 
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+import NavBar from './components/NavBar.vue';
+// import CardComponent from './components/CardComponent.vue';
 // import FooterComponent from './components/FooterComponent.vue'
 
 export default {
-  components: {NavBar, }
+  components: { NavBar, }
   // FooterComponent
+  // CardComponent  
 }
 </script>
 
