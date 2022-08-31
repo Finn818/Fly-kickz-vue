@@ -40,7 +40,7 @@ export default createStore({
       }
     },
     async AllProducts(context) {
-      const response = await fetch(`${nodeEOMP}products`);
+      const response = await fetch(`https://fly-kickz.herokuapp.com/products`);
       const data = await response.json();
       console.log(data);
       context.commit('setProducts', data.products)
@@ -54,3 +54,4 @@ export default createStore({
   modules: {
   }
 })
+// ${nodeEOMP}

@@ -1,15 +1,16 @@
 <template>
   <div class="container" style="margin-top: 5rem">
 
-
     <div class="row d-flex" >
+    
+    <div class="card" style="width: 20rem; margin-bottom: 3rem; border: none">
+
+    <div id="prodLink" :to="{name : 'allproducts' , params:{ id : product.id}}">
+    
+        
         <div class="card-body">
           <div style="height: 100vh" class="col-md-3" v-for="product in products" :key="product.id">
 
-        <div id="prodLink" :to="{name : 'allproducts' , params:{ id : product.id}}">
-          <div class="card" style="width: 20rem; margin-bottom: 3rem; border: none;" >
-      
-            
             <img
             id="Img_URL"
             :src="product.Img_URL"

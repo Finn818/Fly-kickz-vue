@@ -2,7 +2,8 @@
     <div class="container" style="margin-bottom: 5rem" v-if="product" >
        <div class="row">
 
-       <div class="col-sm-6">
+       <div class="card"
+        style="width: 20rem; margin-bottom: 3rem; border: none">
            <div class="container" style="margin-top: 5rem">
             <div v-if="index < 1">
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex justify-content-center pt-5 mt-5">
+  <div class="container d-flex justify-content-center pt-3 mt-5">
     <div>
       <img
         src="https://i.postimg.cc/h4rtDTqx/images.png"
@@ -12,42 +12,31 @@
   </div>
 
   <div
-    class="container"
-    style="display: flex; justify-content: center; margin-bottom: 3rem"
-  >
-    <div class="row" id="About" style="width: 60rem">
-      <div id="AboutTitle">
-        <h1 style="align-items:center">ABOUT</h1>
-      </div>
-      <p class="fw-dark" id="para" ALIGN="CENTER" style="color: aqua">
-        <b
-          >This is a site for LOVERS of nice and forign sneakers, if it is you
-          love sneakers then let me tell you this is the place you want to
-          be.</b
-        >
-      </p>
-    </div>
-    <div class="row d-flex">
-      <div
-        class="card"
+    class="container">
+  <div id="AboutTitle">
+    <h1 id="head">ABOUT</h1>
+  </div>
+  <p id="para" style="color: aqua">
+    This is a site for LOVERS of nicforign sneakers, if it is youlove sneakers then let me tell you ththe place you want to be.
+  </p>
+
+    <div class="row d-flex" id="products">
+      <div class="card"
         style="width: 20rem; margin-bottom: 3rem; border: none" v-for="(product, index) in products"
-    :key="index"
-      >
-      <div v-if="index < 3">
+    :key="index">
+
+      <div v-if="index < 4">
         <router-link
           id="prodLink"
-          :to="{ name: 'singleproduct', params: { id: product.id } }"
-        >
+          :to="{ name: 'singleproduct', params: { id: product.id } }">
+
         <div class="card-body">
           <img
             id="Img_URL"
             :src="product.Img_URL"
             class=img-fluid card-img-top
-            alt="..."
-          />
-            <!-- <p class="card-text" id="Img_URL">
-              {{ product.Img_URL }}
-            </p> -->
+            alt="..."/>
+           
             <p id="prodName"><b>{{ product.prodName }}</b></p>
           </div>
         </router-link>
@@ -72,10 +61,13 @@ export default {
 
 <style scoped>
 #para {
-  font-size: 1.5rem;
+  display: flex;
+  font-size: 1.8rem;
+  position:absolute;
+  margin-right: 30px;
 }
 
-#About{
+#head{
   display: flex;
   justify-content: center;
 }
@@ -84,7 +76,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 
 #prodLink {
@@ -92,13 +84,15 @@ export default {
   color: black;
 }
 
-#Img_URL{
-  padding: auto;
-}
-
 #prodName{
   display: flex;
   justify-content: center;
-  padding: bottom;
+  padding-top: bottom;
+}
+
+#products{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
 }
 </style>
