@@ -12,11 +12,11 @@ export default createStore({
   },
   mutations: {
     setProducts(state, products) {
-      state.allproducts = products
+    state.allproducts = products
 
     },
     setProduct(state, product) {
-      state.singleproduct = product
+    state.singleproduct = product
     }
   },
   actions: {
@@ -24,35 +24,37 @@ export default createStore({
       try{
         const {userName, userEmail, userPassword} = payload;
         const data = {
-          userName,
-          userEmail,
-          userPassword
+        userName,
+        userEmail,
+        userPassword
         };
-        fetch(nodeEOMP+"Users", {
-          method: "patch",
-          body : JSON.stringify(data), 
-          headers: {
-            "Content-type": "application/json; charset=UTF-8"
-          }
-        }).then((res) => res.json())
-        .then((data) => console.log(data))
+      fetch(nodeEOMP+"Users", {
+        method: "patch",
+        body : JSON.stringify(data), 
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+      }).then((res) => res.json())
+      .then((data) => console.log(data))
       }catch(e){
-        console.err()
+      console.err()
       }
     },
+
     AllProducts : async(context) => {
       await fetch(`https://fly-kickz.herokuapp.com/products`)
       .then((res) => res)
       .then( data => data.json())
       .then((results) => {
-        console.log(results.products);
-        context.commit('setProducts',results.products)})
+      console.log(results.products);
+      context.commit('setProducts',results.products)})
     },
+
     SingleProduct(context, id){
       fetch(`https://fly-kickz.herokuapp.com/products/${id}`)
       .then((res) => res)
       .then( data => data.json())
-      .then(results => context.commit('setProduct', results.product[0]))
+      .then(results => context.commit('setProduct', results.products[0]))
     },
   },
   modules: {
