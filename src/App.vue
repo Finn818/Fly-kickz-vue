@@ -9,7 +9,7 @@
   </nav>
   <router-view/> -->
   <NavBar/>
-  <FooterComponent/>
+  <!-- <FooterComponent/> -->
   <div class="min-vh-100">
     <router-view/>
     <!-- <CardComponent/> -->
