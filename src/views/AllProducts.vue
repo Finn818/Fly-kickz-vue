@@ -51,8 +51,6 @@ mounted() {
 </script>
 
 <style>
-  
-
   .card{
   top: 50px;
   left: 50%;
@@ -63,12 +61,12 @@ mounted() {
     display: contents;
   }
 
-  #text{
+  /* #text{
     font-size: 5rem;
     display: flex;
     justify-content: center;
     padding-top: 13rem;
-  }
+  } */
 
   #prodName{
     color: black;
@@ -83,19 +81,15 @@ mounted() {
   .container {
     padding-left: 25em;
     width: 50em;
-    display: flex;
-    justify-content: center;
   }
   
   .card-body{
     width: 20em;
+    height: 15em;
   }
 
   #maindiv{
     width: 30em;
-    /* max-width: 10vh; */
-    /* display: flex;
-    justify-content: center; */
   }
 
   body{
