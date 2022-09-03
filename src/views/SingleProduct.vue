@@ -1,15 +1,16 @@
 <template>
-<div  v-if="products"><div class="container" style="margin-bottom: 5rem">
-<div class="row d-flex">
+<div  v-if="products">
+<div class="container" style="margin-bottom: 5rem;">
+<div class="row d-flex" style=" justify-content: center;" id="box">
 
-<div class="card"
-style="width: 20rem; margin-bottom: 3rem; border: none">
-<div class="card-body" style="margin-top: 5rem">
+<div class="card" id="card"
+style="width: 70rem; margin-bottom: 3rem; border: none; opacity: 0.7;">
 <div v-if="index < 1">
 
 <div v-for="products in products"
 :key="products">
 
+<div id="img" class="col-4">
 <img
     id="Img_URL"
     :src="products.Img_URL"
@@ -17,6 +18,7 @@ style="width: 20rem; margin-bottom: 3rem; border: none">
     alt="..."/>
 </div>
 
+<div id="details" class="col-8">
 <div id="prodName" style="margin-top: 2rem">
 <h1>{{products.prodName}}</h1>
 </div>
@@ -44,6 +46,7 @@ style="width: 20rem; margin-bottom: 3rem; border: none">
 <div id="prodDesc" style="margin-top: 2rem">
 <p class="fw-light">{{products.prodDesc}}</p>
 </div>
+</div>
 
 <div style="display: flex; justify-content: center">
     <button> <router-link
@@ -51,13 +54,12 @@ style="width: 20rem; margin-bottom: 3rem; border: none">
     class="nav-link px-2 text-muted">Check-Out
     </router-link></button>
 </div>
-            
+</div>         
 </div>
       
 </div>  
 </div> 
 </div> 
-</div>
 </div>
     
 <div id="text" v-else>No shoes in stock</div>
@@ -77,28 +79,18 @@ mounted(){
 </script>
 
 <style>
-
-/* button {
-    background: #000;
-    width: 40%;
-    color: white;
-    margin-top: 2rem;
-    border: none;
+#card{
+    height: 38em;
 }
 
-#prodPrice{
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.5rem;
+#box{
+    
 }
-
-#prodName{
-     font-family: 'Montserrat', sans-serif;
-} */
 
 #text{
     font-size: 5rem;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     padding-top: 13rem;
   }
 
