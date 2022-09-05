@@ -44,18 +44,36 @@
             </div>
 
             <div>
-              <label for="" class="fw-light">USERNAME</label>
+              <label for="" class="fw-light">NAME</label>
               <br>
               <input type="text" required>
           </div>
 
           <br>
 
-            <div>
-              <label for="" class="fw-light">EMAIL</label>
+          <div>
+              <label for="" class="fw-light">Surname</label>
               <br>
               <input type="text" required>
           </div>
+
+          <br>
+
+          
+          <div>
+              <label for="" class="fw-light">Username</label>
+              <br>
+              <input type="text" required>
+            </div>
+            
+            <br>
+            
+            <div>
+                <label for="" class="fw-light">EMAIL</label>
+                <br>
+                <input type="text" required>
+            </div>
+  
 
           <br>
 
@@ -99,24 +117,13 @@ export default{
 }
 </script>
 <style scoped>
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100&display=swap'); */
-
-/* #LoginForm{
-    background-color: gray;
-} */
-
 #Login{
    width: 30%;
 }
 
-/* #Register{
+#Register{
     width: 30%;
-    
-} */
-
-/* #RegisterForm{
-    background-color: darkgray; 
-} */
+}
 
 #LoginFormTitle, #RegisterFormTitle{
     margin-bottom: 3rem;
