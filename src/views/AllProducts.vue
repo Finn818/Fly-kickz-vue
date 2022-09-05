@@ -120,8 +120,8 @@ justify-content: center;
 
   body{
   background-image: url(https://i.postimg.cc/hjmfm990/9a7019d8d8032261b81dbe1103ddf57c.jpg);
-  background-position: center;
+  /* background-position: center; */
     background-repeat: repeat;
-    background-size: cover;
+    /* background-size: cover; */
   }
 </style>

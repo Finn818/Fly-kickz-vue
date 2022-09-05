@@ -4,13 +4,13 @@ export default createStore({
   state: {
     allproducts: null,
     singleproduct: null,
-    // productDetail: null
+    productDetail: null
   },
   getters: {
     getUsers: state => state.users,
     getProducts: state => state.allproducts,
     getProduct: state => state.singleproduct,
-    // getProductDetail: state => state.productDetail
+    getProductDetail: state => state.productDetail
   },
   mutations: {
     setProducts(state, products) {
@@ -21,9 +21,9 @@ export default createStore({
     state.singleproduct = product
     },
     
-    // setproductDetails(state, productDetails) {
-    //   state.productDetail = productDetails
-    // }
+    setproductDetails(state, productDetails) {
+      state.productDetail = productDetails
+    }
   },
   actions: {
     login: async (context, payload) =>  {
@@ -61,17 +61,16 @@ export default createStore({
       .then((res) => res)
       .then( data => data.json())
       .then(results => context.commit('setProduct', results.products[0]))
-    }
+    },
 
-    // ProductDetail : async(context) => {
-    //   await fetch(`https://fly-kickz.herokuapp.com/productDetails`)
-    //   .then ((res) => res)
-    //   .then( data => data.json())
-    //   .then((results) => {
-    //     console.log(results.productDetails);
-    //     context.commit('setproductDetails', results.productDetails)
-    //   })
-    // }
+    ProductDetail : async(context) => {
+      await fetch(`https://fly-kickz.herokuapp.com/productDetails`)
+      .then ((res) => res)
+      .then((results) => {
+        console.log(results.productDetails);
+        context.commit('setproductDetails', results.productDetails[0])
+      })
+    }
   },
   modules: {
   }

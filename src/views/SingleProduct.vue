@@ -66,13 +66,14 @@ export default {
 computed:{
     products(){
     return this.$store.state.singleproduct
+    },
+    productDetails() {
+        return this.$store.state.productDetail
     }
     },
-    // productDetails() {
-    //     return this.$store.state.productDetail
-    // },
 mounted(){
-    this.$store.dispatch("SingleProduct", this.$route.params.id)
+    this.$store.dispatch("SingleProduct", this.$route.params.id),
+    this.$store.dispatch("ProductDetails");
     }
 }
 </script>
