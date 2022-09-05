@@ -23,8 +23,7 @@
 
     </div>
 
-  <div v-if="products" id="maindiv">
-  <div class="container" style="margin-top: 5rem">
+  <div v-if="products" id="maindiv" style="margin-top: 5rem">
   <div class="row card" >
   
   <div id="card" v-for="product in products"
@@ -56,7 +55,6 @@
 </div>
 </div>
 </div>
-</div>
 
 <div id="text" v-else>No shoes in stock</div>
 </template>
@@ -72,6 +70,22 @@ mounted() {
   this.$store.dispatch("AllProducts");
     }
 };
+
+// readData(products);
+
+// function airmax(event){
+//     console.log(event);
+//     let newairmax = products.filter(a => {
+//         return a.name == event.target.value
+//     })
+//     readData(newairmax);
+// }
+
+
+// document.getElementById('shoes').addEventListener('change', airmax);
+
+//     localStorage.setItem("property", JSON.stringify(products));
+//     loadData(products);
 </script>
 
 <style>
@@ -80,15 +94,15 @@ mounted() {
   left: 50%;
   }
 
-  #input{
-  display: flex;
-  justify-content: center;
+#input{
+display: flex;
+justify-content: center;
 }
 
-  #prod{
-    padding: 200px;
-    display: contents;
-  }
+#prod{
+  padding: 200px;
+  display: contents;
+}
 
   #prodName{
     color: black;
@@ -99,14 +113,9 @@ mounted() {
     justify-content: center;
   }
   
-
-  .container {
-    padding-left: 25em;
-    width: 50em;
-  }
-  
   #maindiv{
     width: 30em;
+    margin-left: 20em;
   }
 
   body{

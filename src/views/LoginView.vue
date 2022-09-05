@@ -4,7 +4,7 @@
    <div class="container" style="margin-top: 5rem; ">
 
 <div id="box" style="display: inline-flex;
-  flex-wrap: wrap;width: 100% ">
+  flex-wrap: wrap; width: 100% ">
 
     <div id="Login" >
        <form id="LoginForm" @submit.prevent="login">
@@ -42,26 +42,9 @@
             <div id="RegisterFormTitle">
                 <h3>REGISTER</h3>
             </div>
-
-            <div>
-              <label for="" class="fw-light">NAME</label>
-              <br>
-              <input type="text" required>
-          </div>
-
-          <br>
-
-          <div>
-              <label for="" class="fw-light">Surname</label>
-              <br>
-              <input type="text" required>
-          </div>
-
-          <br>
-
           
           <div>
-              <label for="" class="fw-light">Username</label>
+              <label for="" class="fw-light">User-Name</label>
               <br>
               <input type="text" required>
             </div>
@@ -80,10 +63,10 @@
           <div>
               <label for="" class="fw-light">PASSWORD</label>
               <br>
-              <input type="text" required>
+              <input type="password" required>
           </div>
           <div>
-              <button type="submit" style="width: 100%">CREATE</button>
+              <button onclick="myFunction(submit)" style="width: 100%">CREATE</button>
           </div>
         </form>
     </div>

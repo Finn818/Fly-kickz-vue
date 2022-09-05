@@ -5,7 +5,7 @@
 
     
     <div class="card" id="card"
-    style="width: 35em; height: 30em; border: none; opacity: 0.9; margin-right: 500px;">
+    style="width: 38em; height: 33em; border: none; opacity: 0.9; margin-right: 580px;">
     
     <!-- <div id="img"> -->
     <img
