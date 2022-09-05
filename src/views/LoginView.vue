@@ -37,7 +37,7 @@
     </div>
    
 
-      <!-- <div id="Register">
+      <div id="Register">
         <form id="RegisterForm">
             <div id="RegisterFormTitle">
                 <h3>REGISTER</h3>
@@ -68,7 +68,7 @@
               <button type="submit" style="width: 100%">CREATE</button>
           </div>
         </form>
-    </div> -->
+    </div>
 
 </div>
 
