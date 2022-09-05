@@ -37,6 +37,13 @@
     </div>
 </template>
 
+<script>
+export default {
+  
+}
+
+</script>
+
 <style scoped>
 #cartlink{
   padding: 2rem;

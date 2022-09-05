@@ -83,11 +83,6 @@ mounted() {
     width: 50em;
   }
   
-  .card-body{
-    width: 20em;
-    height: 15em;
-  }
-
   #maindiv{
     width: 30em;
   }

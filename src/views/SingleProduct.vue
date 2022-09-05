@@ -1,16 +1,12 @@
 <template>
 <div  v-if="products">
-<div class="container" style="margin-bottom: 5rem;">
+<div class="container">
 <div class="row d-flex" style=" justify-content: center;" id="box">
 
 <div class="card" id="card"
-style="width: 70rem; margin-bottom: 3rem; border: none; opacity: 0.7;">
-<div v-if="index < 1">
+style="width: 70rem; border: none; opacity: 0.7;">
 
-<div v-for="products in products"
-:key="products">
-
-<div id="img" class="col-4">
+<div id="img" class="col-4" >
 <img
     id="Img_URL"
     :src="products.Img_URL"
@@ -18,7 +14,7 @@ style="width: 70rem; margin-bottom: 3rem; border: none; opacity: 0.7;">
     alt="..."/>
 </div>
 
-<div id="details" class="col-8">
+<div id="details" class="col-12">
 <div id="prodName" style="margin-top: 2rem">
 <h1>{{products.prodName}}</h1>
 </div>
@@ -59,8 +55,7 @@ style="width: 70rem; margin-bottom: 3rem; border: none; opacity: 0.7;">
       
 </div>  
 </div> 
-</div> 
-</div>
+
     
 <div id="text" v-else>No shoes in stock</div>
 </template>
@@ -82,16 +77,5 @@ mounted(){
 #card{
     height: 38em;
 }
-
-#box{
-    
-}
-
-#text{
-    font-size: 5rem;
-    /* display: flex;
-    justify-content: center; */
-    padding-top: 13rem;
-  }
 
 </style>
