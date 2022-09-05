@@ -11,39 +11,16 @@
     </div>
   </div>
 
-  <div
-    class="container">
-  <div id="AboutTitle">
-    <h1 id="head">ABOUT</h1>
+  <br>
+
+  <div id="btn">
+    <router-link :to="{ name: 'about'}">
+    <button style="color: black">Broswer
+      </button>
+
+    </router-link>
   </div>
-  <p id="para" style="color: aqua">
-    This is a site for LOVERS of nicforign sneakers, if it is youlove sneakers then let me tell you ththe place you want to be.
-  </p>
-
-    <div class="row d-flex" id="products">
-      <div class="card"
-        style="width: 20rem; margin-bottom: 3rem; border: none" v-for="(product, index) in products"
-    :key="index">
-
-      <div v-if="index < 4">
-        <router-link
-          id="prodLink"
-          :to="{ name: 'singleproduct', params: { id: product.id } }">
-
-        <div class="card-body">
-          <img
-            id="Img_URL"
-            :src="product.Img_URL"
-            class=img-fluid card-img-top
-            alt="..."/>
-           
-            <p id="prodName"><b>{{ product.prodName }}</b></p>
-          </div>
-        </router-link>
-      </div>
-      </div>
-     </div>
-  </div>
+  
 
 </template>
 
@@ -95,5 +72,11 @@ export default {
   display: flex;
   justify-content: space-between;
   padding-top: 100px;
+}
+
+#btn{
+  display: flex;
+  justify-content: center;
+  
 }
 </style>
