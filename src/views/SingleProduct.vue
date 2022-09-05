@@ -1,46 +1,47 @@
 <template>
 <div  v-if="products">
-<div class="container">
+<div class="container" style="padding: 5em">
 <div class="row d-flex" style=" justify-content: center;" id="box">
 
-<div class="card" id="card"
-style="width: 70rem; border: none; opacity: 0.7;">
-
-<div id="img" class="col-4" >
-<img
-    id="Img_URL"
-    :src="products.Img_URL"
-    class=img-fluid card-img-top
-    alt="..."/>
-</div>
+    
+    <div class="card" id="card"
+    style="width: 35em; height: 30em; border: none; opacity: 0.9; margin-right: 500px;">
+    
+    <!-- <div id="img"> -->
+    <img
+        id="Img_URL"
+        :src="products.Img_URL"
+        class=img-fluid card-img-top
+        alt="..."/>
+    <!-- </div> -->
 
 <div id="details" class="col-12">
-<div id="prodName" style="margin-top: 2rem">
-<h1>{{products.prodName}}</h1>
+<div id="prodName">
+<h1><b>{{products.prodName}}</b></h1>
 </div>
                
 <div id="prodPrice" style="margin-top: 2rem">
-<p>R: {{products.prodPrice}}</p>
+<p><b>R: {{products.prodPrice}}</b></p>
 </div>
 
 <div id="prodSize" style="margin-top: 2rem">
-<p> {{products.prodSize}}</p>
+<p><b> {{products.prodSize}}</b></p>
 </div>
 
 <div id="prodArrival_date" style="margin-top: 2rem">
-<p>{{products.prodArrival_date}}</p>
+<p><b>{{products.prodArrival_date}}</b></p>
 </div>
 
 <div id="Stock_Available" style="margin-top: 2rem">
-<p>{{products.Stock_Available}}</p>
+<p><b>Stock Available: {{products.Stock_Available}}</b></p>
 </div>
 
 <div id="color" style="margin-top: 2rem">
-<p>{{products.prodcolor}}</p>
+<p><b>{{products.prodcolor}}</b></p>
 </div>
 
 <div id="prodDesc" style="margin-top: 2rem">
-<p class="fw-light">{{products.prodDesc}}</p>
+<p class="fw-light"><b>{{products.prodDesc}}</b></p>
 </div>
 </div>
 
@@ -67,6 +68,9 @@ computed:{
     return this.$store.state.singleproduct
     }
     },
+    // productDetails() {
+    //     return this.$store.state.productDetail
+    // },
 mounted(){
     this.$store.dispatch("SingleProduct", this.$route.params.id)
     }
@@ -75,7 +79,25 @@ mounted(){
 
 <style>
 #card{
-    height: 38em;
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+/* #Img_URL{
+    width: auto;
+    height: auto;
+} */
+
+#details{
+    margin-left: 20px;
+    background-color: grey;
+    
+
+}
+#prodDesc{
+    position: relative;
+    color: #860101;
 }
 
 </style>

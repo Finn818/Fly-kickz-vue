@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex justify-content-center pt-3 mt-5">
+ <div class="container d-flex justify-content-center pt-3 mt-5">
     <div>
       <img
         src="https://i.postimg.cc/h4rtDTqx/images.png"
@@ -44,6 +44,7 @@
       </div>
      </div>
   </div>
+
 </template>
 
 <script>

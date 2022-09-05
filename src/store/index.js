@@ -3,12 +3,14 @@ const nodeEOMP = "https://fly-kickz.herokuapp.com/";
 export default createStore({
   state: {
     allproducts: null,
-    singleproduct: null
+    singleproduct: null,
+    // productDetail: null
   },
   getters: {
     getUsers: state => state.users,
     getProducts: state => state.allproducts,
-    getProduct: state => state.singleproduct
+    getProduct: state => state.singleproduct,
+    // getProductDetail: state => state.productDetail
   },
   mutations: {
     setProducts(state, products) {
@@ -17,7 +19,11 @@ export default createStore({
     },
     setProduct(state, product) {
     state.singleproduct = product
-    }
+    },
+    
+    // setproductDetails(state, productDetails) {
+    //   state.productDetail = productDetails
+    // }
   },
   actions: {
     login: async (context, payload) =>  {
@@ -55,7 +61,17 @@ export default createStore({
       .then((res) => res)
       .then( data => data.json())
       .then(results => context.commit('setProduct', results.products[0]))
-    },
+    }
+
+    // ProductDetail : async(context) => {
+    //   await fetch(`https://fly-kickz.herokuapp.com/productDetails`)
+    //   .then ((res) => res)
+    //   .then( data => data.json())
+    //   .then((results) => {
+    //     console.log(results.productDetails);
+    //     context.commit('setproductDetails', results.productDetails)
+    //   })
+    // }
   },
   modules: {
   }

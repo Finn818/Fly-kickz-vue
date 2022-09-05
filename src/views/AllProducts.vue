@@ -1,10 +1,34 @@
 <template>
+  <div class="container1" id="input">
+    <label for="" style="color: black;" >Looking for:</label>
+    <select id="shoes" name="make">
+      <option disabled selected value>Make..</option>
+      <option value="Airmax_90">Airmax 90</option>
+      <option value="Airmax_1">Airmax 1</option>
+      <option value="Airmax_95">Airmax 95</option>
+      <option value="Airmax_97">Airmax 97</option>
+      <option value="Jordan_1">Retro 1</option>
+      <option value="Dunk">Dunk</option>
+      <option value="Runner">Runners</option>
+      <option value="Air_Force">Air-Force</option>
+      </select>
+
+    <label for="" style="color: black;" id="Stock">Stock</label>
+    <select id="feet" name="Stock">
+      <option disabled selected value>...</option>
+      <option value="All">All</option>
+      <option value="Available">Available</option>
+      <option value="Out-of-stock">Out-of-stock</option>
+    </select>
+
+    </div>
+
   <div v-if="products" id="maindiv">
   <div class="container" style="margin-top: 5rem">
   <div class="row card" >
   
-      <div id="card" v-for="product in products"
-      :key="product.id">
+  <div id="card" v-for="product in products"
+  :key="product.id">
 
   <div style="height: 120vh" id="prod">
     
@@ -27,11 +51,11 @@
   </button>
 </div>
 
-  </div>
-          
-  </div>
 </div>
-  </div>
+          
+</div>
+</div>
+</div>
 </div>
 
 <div id="text" v-else>No shoes in stock</div>
@@ -56,17 +80,15 @@ mounted() {
   left: 50%;
   }
 
+  #input{
+  display: flex;
+  justify-content: center;
+}
+
   #prod{
     padding: 200px;
     display: contents;
   }
-
-  /* #text{
-    font-size: 5rem;
-    display: flex;
-    justify-content: center;
-    padding-top: 13rem;
-  } */
 
   #prodName{
     color: black;
