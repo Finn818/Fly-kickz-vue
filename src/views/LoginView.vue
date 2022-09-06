@@ -12,20 +12,20 @@
               <h3>LOGIN</h3>
           </div>
           <div>
-              <label for="" class="fw-light">USER-NAME</label>
+              <label for="" class="fw-light"><strong>USER-NAME</strong></label>
               <br>
               <input v-model="userName" type="text" required>
           </div>
             <!-- <br> -->
 
             <div>
-              <label for="" class="fw-light">User-EMAIL</label>
+              <label for="" class="fw-light"><strong>User-EMAIL</strong></label>
               <br>
               <input v-model="userEmail" type="text" required>
           </div>
 
           <div>
-              <label for="" class="fw-light">PASSWORD</label>
+              <label for="" class="fw-light"><strong>PASSWORD</strong></label>
               <br>
               <input v-model="userPassword" type="password" required>
           </div>
@@ -105,11 +105,11 @@ export default{
 </script>
 <style scoped>
 #Login{
-   width: 30%;
+   width: 50%;
 }
 
 #Register{
-    width: 30%;
+    width: 50%;
 }
 
 #LoginFormTitle, #RegisterFormTitle{
@@ -141,6 +141,6 @@ label{
 
 #box>* {
         flex: 1 1 180px;
-        margin: 40px;
+        margin: 55px;
     }
 </style>
