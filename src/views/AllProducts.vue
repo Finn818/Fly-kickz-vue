@@ -20,7 +20,7 @@
         <option value="Out-of-stock">Out-of-stock</option>
       </select>
 
-    <div class="row d-flex justify-content-evenly gap-4" v-if="products">
+    <div class="row d-flex justify-content-evenly gap-5" v-if="products">
       <div class="card" style="width: 16rem;" id="card" v-for="product in products"
         :key="product.id" >
       

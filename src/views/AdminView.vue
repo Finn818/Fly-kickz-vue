@@ -3,9 +3,9 @@
 
 
 <div class="table-responsive">
-   <table class="table " style="margin-top: 5rem">
-  <thead>
-    <tr>
+   <table class="table " style="margin-top: 5rem;">
+  <thead id="head">
+    <tr id="col">
       <th scope="col">Id</th>
       <th scope="col">Image</th>
       <th scope="col">Name</th>
@@ -17,7 +17,7 @@
       
     </tr>
   </thead>
-  <tbody v-if="products">
+  <tbody v-if="products" id="products" style="color:blue">
     <tr v-for="product in products" :key="product" :product="product">
 
       <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.7rem;" scope="row">{{product.id}}</th>
@@ -29,14 +29,14 @@
       <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodColor}}</td>
       <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodArrival_Date}}</td>
       <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.Stock_Available}}</strong></td>
-        <td class="fw-light">{{product.prodDesc}}</td>
+        <td class="fw-light"><strong>{{product.prodDesc}}</strong></td>
       <td>
-        <button type="submit" style="width: 20%">
+        <button type="submit" style="width: 100%">
             EDIT
           </button>
       </td>
       <td>
-          <button type="submit" style="width: 20%">
+          <button type="submit" style="width: 100%">
             DELETE
           </button>
       </td>
@@ -63,12 +63,30 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scope>
 button {
     background: #000;
     width: 40%;
     color: white;
     margin-top: 2rem;
     border: none;
+}
+
+#head {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#col{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
 }
 </style>

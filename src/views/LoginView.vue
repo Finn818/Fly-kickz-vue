@@ -31,6 +31,10 @@
           </div>
 
           <div>
+              <button onclick="myFunction(submit)" style="width: 30%">Forgot Password</button>
+          </div>
+
+          <div>
               <button onclick="myFunction(submit)" style="width: 100%">LOGIN</button>
           </div>
        </form>
