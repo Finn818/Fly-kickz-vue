@@ -11,24 +11,12 @@
           <div id="LoginFormTitle">
               <h3>LOGIN</h3>
           </div>
-          <div>
-              <label for="" class="fw-light"><strong>USER-NAME</strong></label>
-              <br>
-              <input v-model="userName" type="text" required>
-          </div>
-            <!-- <br> -->
 
-            <div>
-              <label for="" class="fw-light"><strong>User-EMAIL</strong></label>
-              <br>
-              <input v-model="userEmail" type="text" required>
-          </div>
-
-          <div>
-              <label for="" class="fw-light"><strong>PASSWORD</strong></label>
-              <br>
-              <input v-model="userPassword" type="password" required>
-          </div>
+        <form action="/" method="POST">  
+        User-Name:<input type="text" name="name">  
+        User-Email: <input type="text" name="email">
+        PASSWORD: <input type="password" name="password">
+        </form>
 
           <div>
               <button onclick="myFunction(submit)" style="width: 30%">Forgot Password</button>
@@ -42,33 +30,16 @@
    
 
       <div id="Register">
-        <form id="RegisterForm">
+        <form id="RegisterForm" action="/register" method="User-Name: ">
             <div id="RegisterFormTitle">
                 <h3>REGISTER</h3>
             </div>
-          
-          <div>
-              <label for="" class="fw-light">User-Name</label>
-              <br>
-              <input type="text" required>
-            </div>
-            
-            <br>
-            
-            <div>
-                <label for="" class="fw-light">EMAIL</label>
-                <br>
-                <input type="text" required>
-            </div>
-  
 
-          <br>
-
-          <div>
-              <label for="" class="fw-light">PASSWORD</label>
-              <br>
-              <input type="password" required>
-          </div>
+    <form action="/register" method="POST">  
+        User-Name:<input type="text" name="name">  
+        User-Email: <input type="text" name="email">
+        PASSWORD: <input type="password" name="password">
+    </form>
           <div>
               <button onclick="myFunction(submit)" style="width: 100%">CREATE</button>
           </div>

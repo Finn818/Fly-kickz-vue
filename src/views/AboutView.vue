@@ -47,3 +47,9 @@ export default {
   },
 };
 </script>
+
+<style>
+#products{
+  align-content: space-between;
+}
+</style>

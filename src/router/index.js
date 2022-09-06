@@ -22,6 +22,13 @@ const routes = [
       }
     },
     {
+      path: '/register',
+      name: 'register',
+      component: function () {
+        return import('../views/RegisterView.vue')
+      }
+    },
+    {
       path: '/allproducts',
       name: 'allproducts',
       component: function () {

@@ -7,7 +7,7 @@
         <option value="Airmax_1">Airmax 1</option>
         <option value="Airmax_95">Airmax 95</option>
         <option value="Airmax_97">Airmax 97</option>
-        <option value="Jordan_1">Retro 1</option>
+        <option value="Jordan_1">Jordan 1</option>
         <option value="Dunk">Dunk</option>
         <option value="Runner">Runners</option>
         <option value="Air_Force">Air-Force</option>
@@ -65,21 +65,6 @@ mounted() {
     }
 };
 
-// readData(products);
-
-// function airmax(event){
-//     console.log(event);
-//     let newairmax = products.filter(a => {
-//         return a.name == event.target.value
-//     })
-//     readData(newairmax);
-// }
-
-
-// document.getElementById('shoes').addEventListener('change', airmax);
-
-//     localStorage.setItem("property", JSON.stringify(products));
-//     loadData(products);
 </script>
 
 <style>
