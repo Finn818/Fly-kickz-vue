@@ -54,7 +54,29 @@ export default {
   color: black;
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
 }
+
+@keyframes textclip {
+  to {
+    background-position: 100% center;
+  }
+}
+
 
 #searchbar{
   width: 100px;

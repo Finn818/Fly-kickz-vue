@@ -7,7 +7,7 @@
         <button class="nav-item">
         <router-link
           :to="{ name: 'about' }"
-          >INFO</router-link>
+          >Browse</router-link>
         </button>
       </div>
 

@@ -31,7 +31,7 @@
         :src="product.Img_URL"
         class="img-fluid"
         card-img-top
-        alt="..." style="background-color:black"/>
+        alt="..."/>
         
         <p class="card-text" id="prodName">
           {{ product.prodName }}
@@ -75,6 +75,8 @@ mounted() {
 
   #prodName{
     color: black;
+    display: flex;
+    justify-content: center;
   }
 
   #btn{
