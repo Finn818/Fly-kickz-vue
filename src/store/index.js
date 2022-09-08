@@ -4,7 +4,9 @@ export default createStore({
   state: {
     allproducts: null,
     singleproduct: null,
-    productDetail: null
+    productDetail: null,
+    users: null,
+    user: null,
   },
   getters: {
     getUsers: state => state.users,
@@ -20,7 +22,13 @@ export default createStore({
     setProduct(state, product) {
     state.singleproduct = product
     },
-    
+    setUsers(state, users) {
+      state.users = users
+  
+      },
+      setUser(state, user) {
+      state.user = user
+      },
     setproductDetails(state, productDetails) {
       state.productDetail = productDetails
     }
@@ -34,8 +42,28 @@ export default createStore({
         userEmail,
         userPassword
         };
-      fetch(nodeEOMP+"Users", {
-        method: "patch",
+      fetch(nodeEOMP+"users/login", {
+        method: "POST",
+        body : JSON.stringify(data), 
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+      }).then((res) => res.json())
+      .then((data) => console.log(data))
+      }catch(e){
+      console.err()
+      }
+    },
+    register: async (context, payload) =>  {
+      try{
+        const {userName, userEmail, userPassword} = payload;
+        const data = {
+        userName,
+        userEmail,
+        userPassword
+        };
+      fetch(nodeEOMP+"users/register", {
+        method: "POST",
         body : JSON.stringify(data), 
         headers: {
         "Content-type": "application/json; charset=UTF-8"

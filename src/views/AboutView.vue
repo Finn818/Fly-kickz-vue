@@ -8,6 +8,8 @@
     This is a site for LOVERS of niceforign sneakers, if it is you love sneakers then let me tell you this is the place you been looking for all your life and the place you want to be!.
   </p>
 
+  <p id="text" style="color: aqua">These are only some of thee amzing shoes in our inventory. Please feel free to look around and if it is you happen to find something you like plz dont feel shy to message us.</p>
+
     <!-- <div class="row d-flex gap-2" id="products">
       <div class="card"
         style="width: 20rem; margin-bottom: 3rem; border: none" v-for="(product, index) in products"
@@ -33,34 +35,37 @@
      </div> -->
   </div>
 
+  <div class="container" id="contanier">
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner ">
     <router-link
           id="prodLink"
           :to="{ name: 'allproducts'}">
+          
     <div class="carousel-item active">
-      <img src="../assets/shoes/53618540-9cc1-412f-a511-2bf312ba2303.webp" class="d-flex" alt="..." style="width: 33em; height: 30em">
+      <img src="../assets/shoes/53618540-9cc1-412f-a511-2bf312ba2303.webp" alt="..." style="width: 33em; height: 30em">
     </div>
     <!-- <div class="carousel-item">
       <img src="../assets/shoes/air-max-270-shoes-zTPvbr.jfif" class="d-flex" alt="..." style="width: 35em; height: 30em">
     </div> -->
     <div class="carousel-item">
-      <img src="../assets/shoes/Colorful-Sole-Nike-Air-Force-1-Low-White-Rainbow-Swoosh-For-Sale.jpeg" class="d-flex" alt="..." style="width: 33em; height: 30em">
+      <img src="../assets/shoes/Colorful-Sole-Nike-Air-Force-1-Low-White-Rainbow-Swoosh-For-Sale.jpeg" alt="..." style="width: 33em; height: 30em">
       </div>
       <div class="carousel-item">
-      <img src="../assets/shoes/Nike-Air-Max-95-Fall-Winter-2016.jpg" class="d-flex" alt="..." style="width: 33em; height: 30em">
+      <img src="../assets/shoes/Nike-Air-Max-95-Fall-Winter-2016.jpg" alt="..." style="width: 33em; height: 30em">
     </div>
     <div class="carousel-item">
-      <img src="../assets/shoes/nike-air-max-97-white-black-blue-orange-fuchsia-cw6992-100-release-date-info-1200x750.webp" class="d-flex" alt="..." style="width: 33em; height: 30em">
+      <img src="../assets/shoes/nike-air-max-97-white-black-blue-orange-fuchsia-cw6992-100-release-date-info-1200x750.webp" alt="..." style="width: 33em; height: 30em">
     </div>
     <div class="carousel-item">
-      <img src="../assets/shoes/nike-dunk-high-retro-knicks-dd1399-800-8.webp" class="d-flex" alt="..." style="width: 33em; height: 30em">
+      <img src="../assets/shoes/nike-dunk-high-retro-knicks-dd1399-800-8.webp" alt="..." style="width: 33em; height: 30em">
     </div>
     <div class="carousel-item">
-      <img src="../assets/shoes/men-nike-air-jordan-1-mid-light-smoke-grey.jpg" class="d-flex" alt="..." style="width: 33em; height: 30em">
+      <img src="../assets/shoes/men-nike-air-jordan-1-mid-light-smoke-grey.jpg" alt="..." style="width: 33em; height: 30em">
     </div>
     </router-link>
   </div>
+</div>
 </div>
 
 </template>
@@ -79,24 +84,9 @@ export default {
 </script>
 
 <style>
-  #prodName{
-  display: flex;
-  justify-content: center;
-  }
-
-  /* .carousel-item {
+  .carousel-item.active{
    display: flex;
    justify-content: center; 
-  } */
-
-  /* .carousel-item-1 {
-   display: flex;
-   justify-content: right; 
-  } */
-
-  .row{
-    padding-top: 50px;
-    justify-content: right; 
   }
 
 #head{
@@ -132,6 +122,11 @@ export default {
   }
 }
 
+#text{
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
 
 #para{
   font-size: 2em;

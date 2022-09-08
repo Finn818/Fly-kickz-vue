@@ -9,7 +9,7 @@
   </nav>
   <router-view/> -->
   <NavBar/>
-  <!-- <FooterComponent/> -->
+  <FooterComponent/>
   <div class="min-vh-100">
     <router-view/>
     <!-- <CardComponent/> -->
@@ -21,11 +21,11 @@
 <script>
 import NavBar from './components/NavBar.vue';
 // import CardComponent from './components/CardComponent.vue';
-// import FooterComponent from './components/FooterComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
-  components: { NavBar, }
-  // FooterComponent
+  components: { NavBar, FooterComponent}
+  
   // CardComponent  
 }
 </script>
