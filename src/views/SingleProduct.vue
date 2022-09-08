@@ -37,7 +37,7 @@
 </div>
 
 <div id="color" style="margin-top: 2rem">
-<p><b>{{products.prodcolor}}</b></p>
+<p><b>{{products.prodColor}}</b></p>
 </div>
 
 <div id="prodDesc" style="margin-top: 2rem">
