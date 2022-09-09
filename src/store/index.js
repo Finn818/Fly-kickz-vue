@@ -12,7 +12,7 @@ export default createStore({
     getUsers: state => state.users,
     getProducts: state => state.allproducts,
     getProduct: state => state.singleproduct,
-    getProductDetail: state => state.productDetail
+    getFullProductDetail: state => state.fullproductDetail
   },
   mutations: {
     setProducts(state, products) {
@@ -29,8 +29,8 @@ export default createStore({
       setUser(state, user) {
       state.user = user
       },
-    setproductDetails(state, productDetails) {
-      state.productDetail = productDetails
+    setfullproductDetails(state, FullProductDetails) {
+      state.fullproductDetail = FullProductDetails
     }
   },
   actions: {
@@ -91,12 +91,13 @@ export default createStore({
       .then(results => context.commit('setProduct', results.products[0]))
     },
 
-    ProductDetail : async(context) => {
+    FullProductDetail : async(context) => {
       await fetch(`https://fly-kickz.herokuapp.com/productDetails`)
       .then ((res) => res)
+      .then( data => data.json())
       .then((results) => {
-        console.log(results.productDetails);
-        context.commit('setproductDetails', results.productDetails[0])
+        console.log(results.fullproductDetails);
+        context.commit('setfullproductDetails', results.fullproductDetails[0])
       })
     }
   },

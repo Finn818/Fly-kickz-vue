@@ -28,16 +28,16 @@
 <p><b> {{products.prodSize}}</b></p>
 </div>
 
+<div id="color" style="margin-top: 2rem">
+<p><b>{{products.prodColor}}</b></p>
+</div>
+
 <div id="prodArrival_date" style="margin-top: 2rem">
 <p><b>{{products.prodArrival_date}}</b></p>
 </div>
 
 <div id="Stock_Available" style="margin-top: 2rem">
 <p><b>Stock Available: {{products.Stock_Available}}</b></p>
-</div>
-
-<div id="color" style="margin-top: 2rem">
-<p><b>{{products.prodColor}}</b></p>
 </div>
 
 <div id="prodDesc" style="margin-top: 2rem">
@@ -65,15 +65,14 @@
 export default {
 computed:{
     products(){
-    return this.$store.state.singleproduct
+    return this.$store.state.products
     },
-    productDetails() {
-        return this.$store.state.productDetail
-    }
+    // productDetails() {
+    //     return this.$store.state.productDetail
+    // }
     },
 mounted(){
-    this.$store.dispatch("SingleProduct", this.$route.params.id),
-    this.$store.dispatch("ProductDetails");
+    this.$store.dispatch("products", this.$route.params.id)
     }
 }
 </script>
