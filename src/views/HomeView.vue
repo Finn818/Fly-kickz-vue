@@ -1,5 +1,5 @@
 <template>
- <div class="container d-flex justify-content-center pt-3 mt-5">
+ <div class="container d-flex justify-content-center pt-3 mt-5" id="pic">
     <div>
       <img
         src="https://i.postimg.cc/h4rtDTqx/images.png"
@@ -81,4 +81,5 @@ export default {
   justify-content: center;
   
 }
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="input">
-      <label for="" style="color: black;">Looking for:</label>
+      <!-- <label for="" style="color: black;">Looking for:</label>
       <select id="shoes" name="make">
         <option disabled selected value>Make..</option>
         <option value="Airmax_90">Airmax 90</option>
@@ -18,7 +18,10 @@
         <option value="All">All</option>
         <option value="Available">Available</option>
         <option value="Out-of-stock">Out-of-stock</option>
-      </select>
+      </select> -->
+      <input type="text" v-model="search" id="searchbar" placeholder="Search.." name="search">
+    <button type="submit" onclick="myfunction()"><i class="bi bi-search"></i></button>
+    </div>
 
     <div class="row d-flex justify-content-evenly gap-5" v-if="products">
       <div class="card" style="width: 16rem;" id="card" v-for="product in products"
@@ -50,16 +53,30 @@
       </div>
     </div>
     <div id="text" v-else>No shoes in stock</div>
-  </div>
+  
 </template>
 
 <script>
 export default {
+  data() {
+        return {
+            search: ""
+        }
+    },
+
   computed: {
     products() {
-    return this.$store.state.allproducts;
+      return this.$store.state.allproducts?.filter((products) => {
+        let isMatch = true;
+        if (
+          !products.prodName.toLowerCase().includes(this.search.toLowerCase())
+        ) {
+          isMatch = false;
+        }
+        return isMatch;
+      });
     },
-    },
+  },
 mounted() {
   this.$store.dispatch("AllProducts");
     }
@@ -80,6 +97,11 @@ mounted() {
   }
 
   #btn{
+    display: flex;
+    justify-content: center;
+  }
+
+  #input{
     display: flex;
     justify-content: center;
   }

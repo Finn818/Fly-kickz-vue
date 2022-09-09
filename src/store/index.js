@@ -4,7 +4,7 @@ export default createStore({
   state: {
     allproducts: null,
     singleproduct: null,
-    // fullproductDetail: null,
+    fullproductDetail: null,
     users: null,
     user: null,
   },
@@ -12,7 +12,7 @@ export default createStore({
     getUsers: state => state.users,
     getProducts: state => state.allproducts,
     getProduct: state => state.singleproduct,
-    // getFullProductDetail: state => state.fullproductDetail
+    getFullProductDetail: state => state.fullproductDetail
   },
   mutations: {
     setProducts(state, products) {
@@ -29,9 +29,9 @@ export default createStore({
       setUser(state, user) {
       state.user = user
       },
-    // setFullProductDetails(state, FullProductDetails) {
-    //   state.fullproductDetail = FullProductDetails
-    // }
+    setFullProductDetail(state, FullProductDetails) {
+      state.fullproductDetail = FullProductDetails
+    }
   },
   actions: {
     login: async (context, payload) =>  {
@@ -91,15 +91,15 @@ export default createStore({
       .then(results => context.commit('setProduct', results.products[0]))
     },
 
-    // FullProductDetail : async(context) => {
-    //   await fetch(`https://fly-kickz.herokuapp.com/productDetails`)
-    //   .then ((res) => res)
-    //   .then( data => data.json())
-    //   .then((results) => {
-    //     console.log(results.fullproductDetails);
-    //     context.commit('setfullproductDetails', results.fullproductDetails[0])
-    //   })
-    // }
+    FullProductDetail : async(context) => {
+      await fetch(`https://fly-kickz.herokuapp.com/products`)
+      .then ((res) => res)
+      .then( data => data.json())
+      .then((results) => {
+        console.log(results.FullProductDetails);
+        context.commit('setFullProductDetails', results.FullProductDetails[0])
+      })
+    }
   },
   modules: {
   }
