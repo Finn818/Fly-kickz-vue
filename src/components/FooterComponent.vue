@@ -1,6 +1,6 @@
 <template>
 
-<footer class="py-3 footer" style="background-color: black; color: white; margin-top: 5rem;">
+<footer class="py-3 footer" style="background-color: black; color: white; margin-top: 15rem;" id="footer">
     <ul class="nav justify-content-center border-bottom pb-2 mb-3" id="footer">
       
       <li class="nav-item"><router-link to="/contact" class="nav-link px-2 text-muted">Contact</router-link></li>
@@ -25,7 +25,7 @@
  }
 
  .py-3.footer{
-  position:fixed;
+  position:relative;
   left:0px;
   bottom:0px;
   height:130px;

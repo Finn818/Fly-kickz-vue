@@ -91,13 +91,13 @@ export default createStore({
       .then(results => context.commit('setProduct', results.products[0]))
     },
 
-    FullProductDetail : async(context) => {
-      await fetch(`https://fly-kickz.herokuapp.com/products`)
+    FullProductDetail : async(context, id) => {
+      await fetch(`https://fly-kickz.herokuapp.com/fullproductDetails/${id}`)
       .then ((res) => res)
       .then( data => data.json())
       .then((results) => {
         console.log(results.FullProductDetails);
-        context.commit('setFullProductDetails', results.FullProductDetails[0])
+        context.commit('setFullProductDetail', results.FullProductDetails[0])
       })
     }
   },

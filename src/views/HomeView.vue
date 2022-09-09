@@ -17,7 +17,7 @@
 
   <div id="btn">
     <router-link :to="{ name: 'about'}">
-    <button style="color: black">Broswer
+    <button style="color: black; height: 130px; width: 270px;font-size: 70px;">Explore
       </button>
 
     </router-link>
@@ -80,6 +80,35 @@ export default {
   display: flex;
   justify-content: center;
   
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  background-image: linear-gradient(
+    -225deg,
+    #3506e0 0%,
+    #28acd7 29%,
+    #ff1313 67%,
+    #3cff00 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: aqua;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
 }
 
+@keyframes textclip {
+  to {
+    background-position: 100% center;
+  }
+}
+  
+
+#footer.py-3.footer{
+  margin-top: 0%;
+}
 </style>

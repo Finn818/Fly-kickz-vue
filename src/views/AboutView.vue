@@ -1,38 +1,17 @@
 <template>
      <div
-    class="container">
+    class="container" style="background-color: white; opacity: 0.4;">
   <div id="AboutTitle">
     <h1 id="head">ABOUT</h1>
   </div>
-  <p id="para" style="color: aqua">
-    This is a site for LOVERS of niceforign sneakers, if it is you love sneakers then let me tell you this is the place you been looking for all your life and the place you want to be!.
+  <div>
+  <p id="para" style="color: black"><strong><b>
+    This is a site for LOVERS of niceforign sneakers, if it is you love sneakers then let me tell you this is the place you been looking for all your life and the place you want to be!.</b></strong>
   </p>
+</div>
 
-  <p id="text" style="color: aqua">These are only some of thee amzing shoes in our inventory. Please feel free to look around and if it is you happen to find something you like plz dont feel shy to message us.</p>
+  <p id="text" style="color: black"><strong><b> These are only some of thee amzing shoes in our inventory. Please feel free to look around and if it is you happen to find something you like plz dont feel shy to message us.</b></strong></p>
 
-    <!-- <div class="row d-flex gap-2" id="products">
-      <div class="card"
-        style="width: 20rem; margin-bottom: 3rem; border: none" v-for="(product, index) in products"
-    :key="index">
-
-      <div v-if="index < 4">
-        <router-link
-          id="prodLink"
-          :to="{ name: 'allproducts'}">
-
-        <div class="card-body">
-          <img
-            id="Img_URL"
-            :src="product.Img_URL"
-            class=img-fluid card-img-top
-            alt="..."/>
-           
-            <p id="prodName"><b>{{ product.prodName }}</b></p>
-          </div>
-        </router-link>
-      </div>
-      </div>
-     </div> -->
   </div>
 
   <div class="container" id="contanier">

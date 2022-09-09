@@ -1,24 +1,5 @@
 <template>
   <div class="container" id="input">
-      <!-- <label for="" style="color: black;">Looking for:</label>
-      <select id="shoes" name="make">
-        <option disabled selected value>Make..</option>
-        <option value="Airmax_90">Airmax 90</option>
-        <option value="Airmax_1">Airmax 1</option>
-        <option value="Airmax_95">Airmax 95</option>
-        <option value="Airmax_97">Airmax 97</option>
-        <option value="Jordan_1">Jordan 1</option>
-        <option value="Dunk">Dunk</option>
-        <option value="Runner">Runners</option>
-        <option value="Air_Force">Air-Force</option>
-      </select>
-      <label for="" style="color: black;" id="Stock">Stock</label>
-      <select id="feet" name="Stock">
-        <option disabled selected value>...</option>
-        <option value="All">All</option>
-        <option value="Available">Available</option>
-        <option value="Out-of-stock">Out-of-stock</option>
-      </select> -->
       <input type="text" v-model="search" id="searchbar" placeholder="Search.." name="search">
     <button type="submit" onclick="myfunction()"><i class="bi bi-search"></i></button>
     </div>

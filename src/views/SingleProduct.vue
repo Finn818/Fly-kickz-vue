@@ -1,5 +1,5 @@
 <template>
-    <div  v-if="products">
+    <div  v-if="FullProductDetails">
     <div class="container" style="padding: 5em">
     <div class="row d-flex" style=" justify-content: center;" id="box">
     
@@ -10,38 +10,38 @@
         
         <img
             id="Img_URL"
-            :src="products.Img_URL"
+            :src="FullProductDetails.Img_URL"
             class=img-fluid card-img-top
             alt="..."/>
        
     
     <div id="details" class="col-12">
     <div id="prodName">
-    <h1><b>{{products.prodName}}</b></h1>
+    <h1><b>{{FullProductDetails.prodName}}</b></h1>
     </div>
                    
     <div id="prodPrice" style="margin-top: 2rem">
-    <p><b>R: {{products.prodPrice}}</b></p>
+    <p><b>R: {{FullProductDetails.prodPrice}}</b></p>
     </div>
     
     <div id="prodSize" style="margin-top: 2rem">
-    <p><b> {{products.prodSize}}</b></p>
+    <p><b> {{FullProductDetails.prodSize}}</b></p>
     </div>
     
     <div id="color" style="margin-top: 2rem">
-    <p><b>{{products.prodColor}}</b></p>
+    <p><b>{{FullProductDetails.prodColor}}</b></p>
     </div>
     
     <div id="prodArrival_date" style="margin-top: 2rem">
-    <p><b>{{products.prodArrival_date}}</b></p>
+    <p><b>{{FullProductDetails.prodArrival_date}}</b></p>
     </div>
     
     <div id="Stock_Available" style="margin-top: 2rem">
-    <p><b>Stock Available: {{products.Stock_Available}}</b></p>
+    <p><b>Stock Available: {{FullProductDetails.Stock_Available}}</b></p>
     </div>
     
     <div id="prodDesc" style="margin-top: 2rem">
-    <p class="fw-light"><b>{{products.prodDesc}}</b></p>
+    <p class="fw-light"><b>{{FullProductDetails.prodDesc}}</b></p>
     </div>
     </div>
     
@@ -64,15 +64,15 @@
     <script>
     export default {
     computed:{
-        products(){
-        return this.$store.state.singleproduct
+        FullProductDetails(){
+        return this.$store.state.fullproductDetail
         },
         // productDetails() {
         //     return this.$store.state.productDetail
         // }
         },
     mounted(){
-        this.$store.dispatch("SingleProduct", this.$route.params.id)
+        this.$store.dispatch("FullProductDetail", this.$route.params.id)
         }
     }
     </script>
@@ -91,13 +91,13 @@
     
     #details{
         margin-left: 20px;
-        background-color: white;
+        background-color: grey;
         
     
     }
     #prodDesc{
         position: relative;
-        color: black;
+        color: #860101;
     }
     
     </style>
