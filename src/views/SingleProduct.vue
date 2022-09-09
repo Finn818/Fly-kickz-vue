@@ -7,13 +7,13 @@
     <div class="card" id="card"
     style="width: 38em; height: 33em; border: none; opacity: 0.9; margin-right: 580px;">
     
-    <!-- <div id="img"> -->
+    
     <img
         id="Img_URL"
         :src="products.Img_URL"
         class=img-fluid card-img-top
         alt="..."/>
-    <!-- </div> -->
+   
 
 <div id="details" class="col-12">
 <div id="prodName">
