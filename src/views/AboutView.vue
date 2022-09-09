@@ -1,6 +1,6 @@
 <template>
      <div
-    class="container" style="background-color: white; opacity: 0.4;">
+    class="container" style="background-color: white; opacity: 0.7;">
   <div id="AboutTitle">
     <h1 id="head">ABOUT</h1>
   </div>
